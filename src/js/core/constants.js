@@ -1,0 +1,4 @@
+export default {
+  LOAD_POKEDEX: "LOAD_POKEDEX",
+  CATCH_POKEMON: "CATCH_POKEMON",
+}
