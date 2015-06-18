@@ -9,22 +9,22 @@ import Pokemon from './pokemon';
 
 export default React.createClass({
 
-	mixins: [FluxMixin(React), StoreWatchMixin('PokedexStore')],
+  mixins: [FluxMixin(React), StoreWatchMixin('PokedexStore')],
 
-	getStateFromFlux() {
-		var flux = this.getFlux();
-		return flux.store('PokedexStore').getState();
-	},
+  getStateFromFlux() {
+    var flux = this.getFlux();
+    return flux.store('PokedexStore').getState();
+  },
 
-	render() {
+  render() {
 
-		let pokemon = this.state.pokedex.map(pokemon => <Pokemon id={idFromResourceURI(pokemon.resource_uri)} />)
+    let pokemon = this.state.pokedex.map(pokemon => <Pokemon id={idFromResourceURI(pokemon.resource_uri)} />)
 
-		return (
-			<ul>
-				{pokemon}
-			</ul>
-		);
-	}
+    return (
+      <ul>
+        {pokemon}
+      </ul>
+    );
+  }
 
 });
