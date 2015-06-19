@@ -6,7 +6,10 @@ var connect = require('gulp-connect');
 var gulp = require('gulp');
 var gulpWebpack = require('gulp-webpack');
 var path = require('path');
+var postcss = require('gulp-postcss');
+var postcssBem = require('postcss-bem');
 var webpack = require('webpack');
+var watch = require('gulp-watch');
 
 
 var PRODUCTION = (process.env.NODE_ENV === 'production');
@@ -45,11 +48,26 @@ gulp.task('build', function() {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch-js', function() {
   var compiler = gulpWebpack(Object.assign({}, {watch: true}, webpackConfig), webpack);
   return gulp.src('./src/js/index.js')
     .pipe(compiler)
     .pipe(gulp.dest('./build'));
+});
+
+gulp.task('css', function() {
+  return gulp.src('./src/css/**/*.css')
+    .pipe(postcss([postcssBem({style: 'bem'})]))
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('watch-css', function() {
+  gulp.src('./src/css/**/*.css')
+    .pipe(watch('./src/css/**/*.css', {verbose: true}, function() {
+      gulp.src('./src/css/**/*.css')
+        .pipe(postcss([postcssBem({style: 'bem'})]))
+        .pipe(gulp.dest('./build'));
+    }))
 });
 
 gulp.task('server', function() {
@@ -59,4 +77,4 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('develop', ['build', 'watch', 'server']);
+gulp.task('develop', ['watch-js', 'watch-css', 'server']);

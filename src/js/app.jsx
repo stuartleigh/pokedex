@@ -19,11 +19,7 @@ export default React.createClass({
   },
 
   render() {
-    return (
-      <div>
-        {this.state.loading ? <h2>loading</h2> : <Pokedex />}
-      </div>
-    );
+    return this.state.loading ? <h2>loading</h2> : <Pokedex />
   }
 
 });

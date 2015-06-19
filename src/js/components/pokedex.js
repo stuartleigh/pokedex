@@ -18,10 +18,10 @@ export default React.createClass({
 
   render() {
 
-    let pokemon = this.state.pokedex.map(pokemon => <Pokemon id={idFromResourceURI(pokemon.resource_uri)} />)
+    let pokemon = this.state.pokedex.map(pokemon => <Pokemon id={idFromResourceURI(pokemon.resource_uri)} key={idFromResourceURI(pokemon.resource_uri)} />)
 
     return (
-      <ul>
+      <ul className="PokemonList">
         {pokemon}
       </ul>
     );

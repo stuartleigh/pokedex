@@ -5,6 +5,8 @@ import {FluxMixin, StoreWatchMixin} from 'fluxxor';
 
 import {idFromResourceURI} from '../core/utils';
 
+import classnames from 'classnames';
+
 let UncaughtPokemon = React.createClass({
   mixins: [FluxMixin(React)],
 
@@ -14,7 +16,7 @@ let UncaughtPokemon = React.createClass({
   },
 
   render() {
-    return <li onClick={this.onClick}>{this.props.id}</li>
+    return <li onClick={this.onClick} className="PokemonList__Item--uncaught">{this.props.id}</li>
   }
 });
 
@@ -22,7 +24,15 @@ let CaughtPokemon = React.createClass({
   mixins: [FluxMixin(React)],
 
   render() {
-    return <li>{this.props.pokemon.name}</li>
+    let classes = {
+      "PokemonList__Item": true,
+      "PokemonList__Item--caught": true,
+    }
+    this.props.pokemon.types.forEach(
+      type => classes["PokemonList__Item--" + type.name] = true
+    );
+    
+    return <li className={classnames(classes)}>{this.props.pokemon.name}</li>
   }
 });
 
