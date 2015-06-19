@@ -6,7 +6,8 @@ var connect = require('gulp-connect');
 var gulp = require('gulp');
 var gulpWebpack = require('gulp-webpack');
 var path = require('path');
-var postcss = require('gulp-postcss');
+var postcss = require('postcss');
+var gulpPostcss = require('gulp-postcss');
 var postcssBem = require('postcss-bem');
 var webpack = require('webpack');
 var watch = require('gulp-watch');
@@ -40,6 +41,43 @@ var webpackConfig = {
   }
 };
 
+var pokemonTypes = function(css) {
+  var typeColours = [['normal', '#A8A878'],
+    ['fire', '#F08030'],
+    ['fighting', '#C03028'],
+    ['water', '#6890F0'],
+    ['flying', '#A890F0'],
+    ['grass', '#78C850'],
+    ['poison', '#A040A0'],
+    ['electric', '#F8D030'],
+    ['ground', '#E0C068'],
+    ['psychic', '#F85888'],
+    ['rock', '#B8A038'],
+    ['ice', '#98D8D8'],
+    ['bug', '#A8B820'],
+    ['dragon', '#7038F8'],
+    ['ghost', '#705898'],
+    ['dark', '#705848'],
+    ['steel', '#B8B8D0'],
+    ['fairy', '#EE99AC']];
+
+  css.eachAtRule('types', function(rule) {
+    typeColours.forEach(function(primaryColour) {
+      var atRule = postcss.atRule({name: "modifier", params: primaryColour[0]});
+      var decl = postcss.decl({prop: 'background', value: primaryColour[1]});
+      atRule.append(decl);
+      rule.parent.append(atRule);
+
+      typeColours.forEach(function(secondaryColour) {
+        var atRule = postcss.atRule({name: "modifier", params: primaryColour[0] + '-' + secondaryColour[0]});
+        var decl = postcss.decl({prop: 'background-image', value: 'linear-gradient(' + primaryColour[1] + ' 50%, ' + secondaryColour[1] + ' 50%, ' + secondaryColour[1] +')'});
+        atRule.append(decl);
+        rule.parent.append(atRule);
+      });
+    });
+  });
+}
+
 
 gulp.task('build', function() {
   var compiler = gulpWebpack(webpackConfig, webpack);
@@ -57,7 +95,7 @@ gulp.task('watch-js', function() {
 
 gulp.task('css', function() {
   return gulp.src('./src/css/**/*.css')
-    .pipe(postcss([postcssBem({style: 'bem'})]))
+    .pipe(gulpPostcss([pokemonTypes, postcssBem()]))
     .pipe(gulp.dest('./build'));
 });
 
@@ -65,7 +103,7 @@ gulp.task('watch-css', function() {
   gulp.src('./src/css/**/*.css')
     .pipe(watch('./src/css/**/*.css', {verbose: true}, function() {
       gulp.src('./src/css/**/*.css')
-        .pipe(postcss([postcssBem()]))
+        .pipe(gulpPostcss([pokemonTypes, postcssBem()]))
         .pipe(gulp.dest('./build'));
     }))
 });

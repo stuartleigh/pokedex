@@ -51,11 +51,21 @@ let CaughtPokemon = React.createClass({
       "PokemonList-Item": true,
       "PokemonList-Item--caught": true,
     }
-    this.props.pokemon.types.forEach(
-      type => classes["PokemonList-Item--" + type.name] = true
-    );
-    
-    return <li className={classnames(classes)}>{this.props.pokemon.name}</li>
+
+    let typeClasses = {
+      "PokemonType": true
+    }
+    // this.props.pokemon.types.forEach(
+    //   type => typeClasses["PokemonType--" + type.name] = true
+    // );
+    typeClasses["PokemonType--" + this.props.pokemon.types.map(type => type.name).join('-')] = true
+    return (
+      <li className={classnames(classes)}>
+        <div className={classnames(typeClasses)} />
+        <img src={this.props.pokemon.spriteURL} />
+        <div className="PokemonName">{this.props.pokemon.name}</div>
+      </li>
+    )
   }
 });
 

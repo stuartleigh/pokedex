@@ -4,6 +4,10 @@ html, body {
   background: #f5f5f5;
 }
 
+img {
+  z-index: 20;
+}
+
 .PokemonList {
   margin: 0;
   padding: 0;
@@ -14,8 +18,12 @@ html, body {
 
 .PokemonList-Item {
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
 @keyframes spin {
@@ -63,3 +71,1385 @@ html, body {
   line-height: 1.7rem;
   font-size: 0.9rem;
 }
+
+.PokemonType {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+
+  @types {}
+}
+
+.PokemonType--normal {
+  background: #A8A878;
+}
+
+.PokemonType--normal-normal {
+  background-image: linear-gradient(#A8A878 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--normal-fire {
+  background-image: linear-gradient(#A8A878 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--normal-fighting {
+  background-image: linear-gradient(#A8A878 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--normal-water {
+  background-image: linear-gradient(#A8A878 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--normal-flying {
+  background-image: linear-gradient(#A8A878 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--normal-grass {
+  background-image: linear-gradient(#A8A878 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--normal-poison {
+  background-image: linear-gradient(#A8A878 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--normal-electric {
+  background-image: linear-gradient(#A8A878 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--normal-ground {
+  background-image: linear-gradient(#A8A878 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--normal-psychic {
+  background-image: linear-gradient(#A8A878 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--normal-rock {
+  background-image: linear-gradient(#A8A878 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--normal-ice {
+  background-image: linear-gradient(#A8A878 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--normal-bug {
+  background-image: linear-gradient(#A8A878 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--normal-dragon {
+  background-image: linear-gradient(#A8A878 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--normal-ghost {
+  background-image: linear-gradient(#A8A878 50%, #705898 50%, #705898);
+}
+
+.PokemonType--normal-dark {
+  background-image: linear-gradient(#A8A878 50%, #705848 50%, #705848);
+}
+
+.PokemonType--normal-steel {
+  background-image: linear-gradient(#A8A878 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--normal-fairy {
+  background-image: linear-gradient(#A8A878 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--fire {
+  background: #F08030;
+}
+
+.PokemonType--fire-normal {
+  background-image: linear-gradient(#F08030 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--fire-fire {
+  background-image: linear-gradient(#F08030 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--fire-fighting {
+  background-image: linear-gradient(#F08030 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--fire-water {
+  background-image: linear-gradient(#F08030 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--fire-flying {
+  background-image: linear-gradient(#F08030 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--fire-grass {
+  background-image: linear-gradient(#F08030 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--fire-poison {
+  background-image: linear-gradient(#F08030 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--fire-electric {
+  background-image: linear-gradient(#F08030 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--fire-ground {
+  background-image: linear-gradient(#F08030 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--fire-psychic {
+  background-image: linear-gradient(#F08030 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--fire-rock {
+  background-image: linear-gradient(#F08030 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--fire-ice {
+  background-image: linear-gradient(#F08030 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--fire-bug {
+  background-image: linear-gradient(#F08030 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--fire-dragon {
+  background-image: linear-gradient(#F08030 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--fire-ghost {
+  background-image: linear-gradient(#F08030 50%, #705898 50%, #705898);
+}
+
+.PokemonType--fire-dark {
+  background-image: linear-gradient(#F08030 50%, #705848 50%, #705848);
+}
+
+.PokemonType--fire-steel {
+  background-image: linear-gradient(#F08030 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--fire-fairy {
+  background-image: linear-gradient(#F08030 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--fighting {
+  background: #C03028;
+}
+
+.PokemonType--fighting-normal {
+  background-image: linear-gradient(#C03028 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--fighting-fire {
+  background-image: linear-gradient(#C03028 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--fighting-fighting {
+  background-image: linear-gradient(#C03028 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--fighting-water {
+  background-image: linear-gradient(#C03028 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--fighting-flying {
+  background-image: linear-gradient(#C03028 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--fighting-grass {
+  background-image: linear-gradient(#C03028 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--fighting-poison {
+  background-image: linear-gradient(#C03028 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--fighting-electric {
+  background-image: linear-gradient(#C03028 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--fighting-ground {
+  background-image: linear-gradient(#C03028 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--fighting-psychic {
+  background-image: linear-gradient(#C03028 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--fighting-rock {
+  background-image: linear-gradient(#C03028 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--fighting-ice {
+  background-image: linear-gradient(#C03028 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--fighting-bug {
+  background-image: linear-gradient(#C03028 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--fighting-dragon {
+  background-image: linear-gradient(#C03028 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--fighting-ghost {
+  background-image: linear-gradient(#C03028 50%, #705898 50%, #705898);
+}
+
+.PokemonType--fighting-dark {
+  background-image: linear-gradient(#C03028 50%, #705848 50%, #705848);
+}
+
+.PokemonType--fighting-steel {
+  background-image: linear-gradient(#C03028 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--fighting-fairy {
+  background-image: linear-gradient(#C03028 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--water {
+  background: #6890F0;
+}
+
+.PokemonType--water-normal {
+  background-image: linear-gradient(#6890F0 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--water-fire {
+  background-image: linear-gradient(#6890F0 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--water-fighting {
+  background-image: linear-gradient(#6890F0 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--water-water {
+  background-image: linear-gradient(#6890F0 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--water-flying {
+  background-image: linear-gradient(#6890F0 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--water-grass {
+  background-image: linear-gradient(#6890F0 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--water-poison {
+  background-image: linear-gradient(#6890F0 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--water-electric {
+  background-image: linear-gradient(#6890F0 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--water-ground {
+  background-image: linear-gradient(#6890F0 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--water-psychic {
+  background-image: linear-gradient(#6890F0 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--water-rock {
+  background-image: linear-gradient(#6890F0 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--water-ice {
+  background-image: linear-gradient(#6890F0 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--water-bug {
+  background-image: linear-gradient(#6890F0 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--water-dragon {
+  background-image: linear-gradient(#6890F0 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--water-ghost {
+  background-image: linear-gradient(#6890F0 50%, #705898 50%, #705898);
+}
+
+.PokemonType--water-dark {
+  background-image: linear-gradient(#6890F0 50%, #705848 50%, #705848);
+}
+
+.PokemonType--water-steel {
+  background-image: linear-gradient(#6890F0 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--water-fairy {
+  background-image: linear-gradient(#6890F0 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--flying {
+  background: #A890F0;
+}
+
+.PokemonType--flying-normal {
+  background-image: linear-gradient(#A890F0 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--flying-fire {
+  background-image: linear-gradient(#A890F0 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--flying-fighting {
+  background-image: linear-gradient(#A890F0 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--flying-water {
+  background-image: linear-gradient(#A890F0 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--flying-flying {
+  background-image: linear-gradient(#A890F0 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--flying-grass {
+  background-image: linear-gradient(#A890F0 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--flying-poison {
+  background-image: linear-gradient(#A890F0 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--flying-electric {
+  background-image: linear-gradient(#A890F0 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--flying-ground {
+  background-image: linear-gradient(#A890F0 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--flying-psychic {
+  background-image: linear-gradient(#A890F0 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--flying-rock {
+  background-image: linear-gradient(#A890F0 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--flying-ice {
+  background-image: linear-gradient(#A890F0 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--flying-bug {
+  background-image: linear-gradient(#A890F0 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--flying-dragon {
+  background-image: linear-gradient(#A890F0 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--flying-ghost {
+  background-image: linear-gradient(#A890F0 50%, #705898 50%, #705898);
+}
+
+.PokemonType--flying-dark {
+  background-image: linear-gradient(#A890F0 50%, #705848 50%, #705848);
+}
+
+.PokemonType--flying-steel {
+  background-image: linear-gradient(#A890F0 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--flying-fairy {
+  background-image: linear-gradient(#A890F0 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--grass {
+  background: #78C850;
+}
+
+.PokemonType--grass-normal {
+  background-image: linear-gradient(#78C850 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--grass-fire {
+  background-image: linear-gradient(#78C850 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--grass-fighting {
+  background-image: linear-gradient(#78C850 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--grass-water {
+  background-image: linear-gradient(#78C850 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--grass-flying {
+  background-image: linear-gradient(#78C850 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--grass-grass {
+  background-image: linear-gradient(#78C850 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--grass-poison {
+  background-image: linear-gradient(#78C850 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--grass-electric {
+  background-image: linear-gradient(#78C850 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--grass-ground {
+  background-image: linear-gradient(#78C850 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--grass-psychic {
+  background-image: linear-gradient(#78C850 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--grass-rock {
+  background-image: linear-gradient(#78C850 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--grass-ice {
+  background-image: linear-gradient(#78C850 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--grass-bug {
+  background-image: linear-gradient(#78C850 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--grass-dragon {
+  background-image: linear-gradient(#78C850 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--grass-ghost {
+  background-image: linear-gradient(#78C850 50%, #705898 50%, #705898);
+}
+
+.PokemonType--grass-dark {
+  background-image: linear-gradient(#78C850 50%, #705848 50%, #705848);
+}
+
+.PokemonType--grass-steel {
+  background-image: linear-gradient(#78C850 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--grass-fairy {
+  background-image: linear-gradient(#78C850 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--poison {
+  background: #A040A0;
+}
+
+.PokemonType--poison-normal {
+  background-image: linear-gradient(#A040A0 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--poison-fire {
+  background-image: linear-gradient(#A040A0 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--poison-fighting {
+  background-image: linear-gradient(#A040A0 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--poison-water {
+  background-image: linear-gradient(#A040A0 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--poison-flying {
+  background-image: linear-gradient(#A040A0 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--poison-grass {
+  background-image: linear-gradient(#A040A0 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--poison-poison {
+  background-image: linear-gradient(#A040A0 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--poison-electric {
+  background-image: linear-gradient(#A040A0 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--poison-ground {
+  background-image: linear-gradient(#A040A0 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--poison-psychic {
+  background-image: linear-gradient(#A040A0 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--poison-rock {
+  background-image: linear-gradient(#A040A0 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--poison-ice {
+  background-image: linear-gradient(#A040A0 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--poison-bug {
+  background-image: linear-gradient(#A040A0 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--poison-dragon {
+  background-image: linear-gradient(#A040A0 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--poison-ghost {
+  background-image: linear-gradient(#A040A0 50%, #705898 50%, #705898);
+}
+
+.PokemonType--poison-dark {
+  background-image: linear-gradient(#A040A0 50%, #705848 50%, #705848);
+}
+
+.PokemonType--poison-steel {
+  background-image: linear-gradient(#A040A0 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--poison-fairy {
+  background-image: linear-gradient(#A040A0 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--electric {
+  background: #F8D030;
+}
+
+.PokemonType--electric-normal {
+  background-image: linear-gradient(#F8D030 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--electric-fire {
+  background-image: linear-gradient(#F8D030 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--electric-fighting {
+  background-image: linear-gradient(#F8D030 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--electric-water {
+  background-image: linear-gradient(#F8D030 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--electric-flying {
+  background-image: linear-gradient(#F8D030 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--electric-grass {
+  background-image: linear-gradient(#F8D030 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--electric-poison {
+  background-image: linear-gradient(#F8D030 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--electric-electric {
+  background-image: linear-gradient(#F8D030 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--electric-ground {
+  background-image: linear-gradient(#F8D030 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--electric-psychic {
+  background-image: linear-gradient(#F8D030 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--electric-rock {
+  background-image: linear-gradient(#F8D030 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--electric-ice {
+  background-image: linear-gradient(#F8D030 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--electric-bug {
+  background-image: linear-gradient(#F8D030 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--electric-dragon {
+  background-image: linear-gradient(#F8D030 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--electric-ghost {
+  background-image: linear-gradient(#F8D030 50%, #705898 50%, #705898);
+}
+
+.PokemonType--electric-dark {
+  background-image: linear-gradient(#F8D030 50%, #705848 50%, #705848);
+}
+
+.PokemonType--electric-steel {
+  background-image: linear-gradient(#F8D030 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--electric-fairy {
+  background-image: linear-gradient(#F8D030 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--ground {
+  background: #E0C068;
+}
+
+.PokemonType--ground-normal {
+  background-image: linear-gradient(#E0C068 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--ground-fire {
+  background-image: linear-gradient(#E0C068 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--ground-fighting {
+  background-image: linear-gradient(#E0C068 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--ground-water {
+  background-image: linear-gradient(#E0C068 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--ground-flying {
+  background-image: linear-gradient(#E0C068 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--ground-grass {
+  background-image: linear-gradient(#E0C068 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--ground-poison {
+  background-image: linear-gradient(#E0C068 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--ground-electric {
+  background-image: linear-gradient(#E0C068 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--ground-ground {
+  background-image: linear-gradient(#E0C068 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--ground-psychic {
+  background-image: linear-gradient(#E0C068 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--ground-rock {
+  background-image: linear-gradient(#E0C068 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--ground-ice {
+  background-image: linear-gradient(#E0C068 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--ground-bug {
+  background-image: linear-gradient(#E0C068 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--ground-dragon {
+  background-image: linear-gradient(#E0C068 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--ground-ghost {
+  background-image: linear-gradient(#E0C068 50%, #705898 50%, #705898);
+}
+
+.PokemonType--ground-dark {
+  background-image: linear-gradient(#E0C068 50%, #705848 50%, #705848);
+}
+
+.PokemonType--ground-steel {
+  background-image: linear-gradient(#E0C068 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--ground-fairy {
+  background-image: linear-gradient(#E0C068 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--psychic {
+  background: #F85888;
+}
+
+.PokemonType--psychic-normal {
+  background-image: linear-gradient(#F85888 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--psychic-fire {
+  background-image: linear-gradient(#F85888 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--psychic-fighting {
+  background-image: linear-gradient(#F85888 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--psychic-water {
+  background-image: linear-gradient(#F85888 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--psychic-flying {
+  background-image: linear-gradient(#F85888 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--psychic-grass {
+  background-image: linear-gradient(#F85888 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--psychic-poison {
+  background-image: linear-gradient(#F85888 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--psychic-electric {
+  background-image: linear-gradient(#F85888 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--psychic-ground {
+  background-image: linear-gradient(#F85888 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--psychic-psychic {
+  background-image: linear-gradient(#F85888 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--psychic-rock {
+  background-image: linear-gradient(#F85888 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--psychic-ice {
+  background-image: linear-gradient(#F85888 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--psychic-bug {
+  background-image: linear-gradient(#F85888 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--psychic-dragon {
+  background-image: linear-gradient(#F85888 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--psychic-ghost {
+  background-image: linear-gradient(#F85888 50%, #705898 50%, #705898);
+}
+
+.PokemonType--psychic-dark {
+  background-image: linear-gradient(#F85888 50%, #705848 50%, #705848);
+}
+
+.PokemonType--psychic-steel {
+  background-image: linear-gradient(#F85888 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--psychic-fairy {
+  background-image: linear-gradient(#F85888 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--rock {
+  background: #B8A038;
+}
+
+.PokemonType--rock-normal {
+  background-image: linear-gradient(#B8A038 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--rock-fire {
+  background-image: linear-gradient(#B8A038 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--rock-fighting {
+  background-image: linear-gradient(#B8A038 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--rock-water {
+  background-image: linear-gradient(#B8A038 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--rock-flying {
+  background-image: linear-gradient(#B8A038 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--rock-grass {
+  background-image: linear-gradient(#B8A038 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--rock-poison {
+  background-image: linear-gradient(#B8A038 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--rock-electric {
+  background-image: linear-gradient(#B8A038 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--rock-ground {
+  background-image: linear-gradient(#B8A038 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--rock-psychic {
+  background-image: linear-gradient(#B8A038 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--rock-rock {
+  background-image: linear-gradient(#B8A038 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--rock-ice {
+  background-image: linear-gradient(#B8A038 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--rock-bug {
+  background-image: linear-gradient(#B8A038 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--rock-dragon {
+  background-image: linear-gradient(#B8A038 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--rock-ghost {
+  background-image: linear-gradient(#B8A038 50%, #705898 50%, #705898);
+}
+
+.PokemonType--rock-dark {
+  background-image: linear-gradient(#B8A038 50%, #705848 50%, #705848);
+}
+
+.PokemonType--rock-steel {
+  background-image: linear-gradient(#B8A038 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--rock-fairy {
+  background-image: linear-gradient(#B8A038 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--ice {
+  background: #98D8D8;
+}
+
+.PokemonType--ice-normal {
+  background-image: linear-gradient(#98D8D8 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--ice-fire {
+  background-image: linear-gradient(#98D8D8 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--ice-fighting {
+  background-image: linear-gradient(#98D8D8 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--ice-water {
+  background-image: linear-gradient(#98D8D8 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--ice-flying {
+  background-image: linear-gradient(#98D8D8 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--ice-grass {
+  background-image: linear-gradient(#98D8D8 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--ice-poison {
+  background-image: linear-gradient(#98D8D8 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--ice-electric {
+  background-image: linear-gradient(#98D8D8 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--ice-ground {
+  background-image: linear-gradient(#98D8D8 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--ice-psychic {
+  background-image: linear-gradient(#98D8D8 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--ice-rock {
+  background-image: linear-gradient(#98D8D8 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--ice-ice {
+  background-image: linear-gradient(#98D8D8 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--ice-bug {
+  background-image: linear-gradient(#98D8D8 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--ice-dragon {
+  background-image: linear-gradient(#98D8D8 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--ice-ghost {
+  background-image: linear-gradient(#98D8D8 50%, #705898 50%, #705898);
+}
+
+.PokemonType--ice-dark {
+  background-image: linear-gradient(#98D8D8 50%, #705848 50%, #705848);
+}
+
+.PokemonType--ice-steel {
+  background-image: linear-gradient(#98D8D8 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--ice-fairy {
+  background-image: linear-gradient(#98D8D8 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--bug {
+  background: #A8B820;
+}
+
+.PokemonType--bug-normal {
+  background-image: linear-gradient(#A8B820 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--bug-fire {
+  background-image: linear-gradient(#A8B820 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--bug-fighting {
+  background-image: linear-gradient(#A8B820 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--bug-water {
+  background-image: linear-gradient(#A8B820 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--bug-flying {
+  background-image: linear-gradient(#A8B820 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--bug-grass {
+  background-image: linear-gradient(#A8B820 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--bug-poison {
+  background-image: linear-gradient(#A8B820 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--bug-electric {
+  background-image: linear-gradient(#A8B820 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--bug-ground {
+  background-image: linear-gradient(#A8B820 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--bug-psychic {
+  background-image: linear-gradient(#A8B820 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--bug-rock {
+  background-image: linear-gradient(#A8B820 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--bug-ice {
+  background-image: linear-gradient(#A8B820 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--bug-bug {
+  background-image: linear-gradient(#A8B820 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--bug-dragon {
+  background-image: linear-gradient(#A8B820 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--bug-ghost {
+  background-image: linear-gradient(#A8B820 50%, #705898 50%, #705898);
+}
+
+.PokemonType--bug-dark {
+  background-image: linear-gradient(#A8B820 50%, #705848 50%, #705848);
+}
+
+.PokemonType--bug-steel {
+  background-image: linear-gradient(#A8B820 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--bug-fairy {
+  background-image: linear-gradient(#A8B820 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--dragon {
+  background: #7038F8;
+}
+
+.PokemonType--dragon-normal {
+  background-image: linear-gradient(#7038F8 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--dragon-fire {
+  background-image: linear-gradient(#7038F8 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--dragon-fighting {
+  background-image: linear-gradient(#7038F8 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--dragon-water {
+  background-image: linear-gradient(#7038F8 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--dragon-flying {
+  background-image: linear-gradient(#7038F8 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--dragon-grass {
+  background-image: linear-gradient(#7038F8 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--dragon-poison {
+  background-image: linear-gradient(#7038F8 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--dragon-electric {
+  background-image: linear-gradient(#7038F8 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--dragon-ground {
+  background-image: linear-gradient(#7038F8 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--dragon-psychic {
+  background-image: linear-gradient(#7038F8 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--dragon-rock {
+  background-image: linear-gradient(#7038F8 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--dragon-ice {
+  background-image: linear-gradient(#7038F8 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--dragon-bug {
+  background-image: linear-gradient(#7038F8 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--dragon-dragon {
+  background-image: linear-gradient(#7038F8 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--dragon-ghost {
+  background-image: linear-gradient(#7038F8 50%, #705898 50%, #705898);
+}
+
+.PokemonType--dragon-dark {
+  background-image: linear-gradient(#7038F8 50%, #705848 50%, #705848);
+}
+
+.PokemonType--dragon-steel {
+  background-image: linear-gradient(#7038F8 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--dragon-fairy {
+  background-image: linear-gradient(#7038F8 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--ghost {
+  background: #705898;
+}
+
+.PokemonType--ghost-normal {
+  background-image: linear-gradient(#705898 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--ghost-fire {
+  background-image: linear-gradient(#705898 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--ghost-fighting {
+  background-image: linear-gradient(#705898 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--ghost-water {
+  background-image: linear-gradient(#705898 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--ghost-flying {
+  background-image: linear-gradient(#705898 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--ghost-grass {
+  background-image: linear-gradient(#705898 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--ghost-poison {
+  background-image: linear-gradient(#705898 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--ghost-electric {
+  background-image: linear-gradient(#705898 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--ghost-ground {
+  background-image: linear-gradient(#705898 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--ghost-psychic {
+  background-image: linear-gradient(#705898 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--ghost-rock {
+  background-image: linear-gradient(#705898 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--ghost-ice {
+  background-image: linear-gradient(#705898 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--ghost-bug {
+  background-image: linear-gradient(#705898 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--ghost-dragon {
+  background-image: linear-gradient(#705898 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--ghost-ghost {
+  background-image: linear-gradient(#705898 50%, #705898 50%, #705898);
+}
+
+.PokemonType--ghost-dark {
+  background-image: linear-gradient(#705898 50%, #705848 50%, #705848);
+}
+
+.PokemonType--ghost-steel {
+  background-image: linear-gradient(#705898 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--ghost-fairy {
+  background-image: linear-gradient(#705898 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--dark {
+  background: #705848;
+}
+
+.PokemonType--dark-normal {
+  background-image: linear-gradient(#705848 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--dark-fire {
+  background-image: linear-gradient(#705848 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--dark-fighting {
+  background-image: linear-gradient(#705848 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--dark-water {
+  background-image: linear-gradient(#705848 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--dark-flying {
+  background-image: linear-gradient(#705848 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--dark-grass {
+  background-image: linear-gradient(#705848 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--dark-poison {
+  background-image: linear-gradient(#705848 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--dark-electric {
+  background-image: linear-gradient(#705848 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--dark-ground {
+  background-image: linear-gradient(#705848 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--dark-psychic {
+  background-image: linear-gradient(#705848 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--dark-rock {
+  background-image: linear-gradient(#705848 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--dark-ice {
+  background-image: linear-gradient(#705848 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--dark-bug {
+  background-image: linear-gradient(#705848 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--dark-dragon {
+  background-image: linear-gradient(#705848 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--dark-ghost {
+  background-image: linear-gradient(#705848 50%, #705898 50%, #705898);
+}
+
+.PokemonType--dark-dark {
+  background-image: linear-gradient(#705848 50%, #705848 50%, #705848);
+}
+
+.PokemonType--dark-steel {
+  background-image: linear-gradient(#705848 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--dark-fairy {
+  background-image: linear-gradient(#705848 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--steel {
+  background: #B8B8D0;
+}
+
+.PokemonType--steel-normal {
+  background-image: linear-gradient(#B8B8D0 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--steel-fire {
+  background-image: linear-gradient(#B8B8D0 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--steel-fighting {
+  background-image: linear-gradient(#B8B8D0 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--steel-water {
+  background-image: linear-gradient(#B8B8D0 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--steel-flying {
+  background-image: linear-gradient(#B8B8D0 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--steel-grass {
+  background-image: linear-gradient(#B8B8D0 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--steel-poison {
+  background-image: linear-gradient(#B8B8D0 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--steel-electric {
+  background-image: linear-gradient(#B8B8D0 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--steel-ground {
+  background-image: linear-gradient(#B8B8D0 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--steel-psychic {
+  background-image: linear-gradient(#B8B8D0 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--steel-rock {
+  background-image: linear-gradient(#B8B8D0 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--steel-ice {
+  background-image: linear-gradient(#B8B8D0 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--steel-bug {
+  background-image: linear-gradient(#B8B8D0 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--steel-dragon {
+  background-image: linear-gradient(#B8B8D0 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--steel-ghost {
+  background-image: linear-gradient(#B8B8D0 50%, #705898 50%, #705898);
+}
+
+.PokemonType--steel-dark {
+  background-image: linear-gradient(#B8B8D0 50%, #705848 50%, #705848);
+}
+
+.PokemonType--steel-steel {
+  background-image: linear-gradient(#B8B8D0 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--steel-fairy {
+  background-image: linear-gradient(#B8B8D0 50%, #EE99AC 50%, #EE99AC);
+}
+
+.PokemonType--fairy {
+  background: #EE99AC;
+}
+
+.PokemonType--fairy-normal {
+  background-image: linear-gradient(#EE99AC 50%, #A8A878 50%, #A8A878);
+}
+
+.PokemonType--fairy-fire {
+  background-image: linear-gradient(#EE99AC 50%, #F08030 50%, #F08030);
+}
+
+.PokemonType--fairy-fighting {
+  background-image: linear-gradient(#EE99AC 50%, #C03028 50%, #C03028);
+}
+
+.PokemonType--fairy-water {
+  background-image: linear-gradient(#EE99AC 50%, #6890F0 50%, #6890F0);
+}
+
+.PokemonType--fairy-flying {
+  background-image: linear-gradient(#EE99AC 50%, #A890F0 50%, #A890F0);
+}
+
+.PokemonType--fairy-grass {
+  background-image: linear-gradient(#EE99AC 50%, #78C850 50%, #78C850);
+}
+
+.PokemonType--fairy-poison {
+  background-image: linear-gradient(#EE99AC 50%, #A040A0 50%, #A040A0);
+}
+
+.PokemonType--fairy-electric {
+  background-image: linear-gradient(#EE99AC 50%, #F8D030 50%, #F8D030);
+}
+
+.PokemonType--fairy-ground {
+  background-image: linear-gradient(#EE99AC 50%, #E0C068 50%, #E0C068);
+}
+
+.PokemonType--fairy-psychic {
+  background-image: linear-gradient(#EE99AC 50%, #F85888 50%, #F85888);
+}
+
+.PokemonType--fairy-rock {
+  background-image: linear-gradient(#EE99AC 50%, #B8A038 50%, #B8A038);
+}
+
+.PokemonType--fairy-ice {
+  background-image: linear-gradient(#EE99AC 50%, #98D8D8 50%, #98D8D8);
+}
+
+.PokemonType--fairy-bug {
+  background-image: linear-gradient(#EE99AC 50%, #A8B820 50%, #A8B820);
+}
+
+.PokemonType--fairy-dragon {
+  background-image: linear-gradient(#EE99AC 50%, #7038F8 50%, #7038F8);
+}
+
+.PokemonType--fairy-ghost {
+  background-image: linear-gradient(#EE99AC 50%, #705898 50%, #705898);
+}
+
+.PokemonType--fairy-dark {
+  background-image: linear-gradient(#EE99AC 50%, #705848 50%, #705848);
+}
+
+.PokemonType--fairy-steel {
+  background-image: linear-gradient(#EE99AC 50%, #B8B8D0 50%, #B8B8D0);
+}
+
+.PokemonType--fairy-fairy {
+  background-image: linear-gradient(#EE99AC 50%, #EE99AC 50%, #EE99AC);
+}
+
+
