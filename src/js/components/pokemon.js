@@ -7,8 +7,15 @@ import {idFromResourceURI} from '../core/utils';
 
 import classnames from 'classnames';
 
+
 let UncaughtPokemon = React.createClass({
   mixins: [FluxMixin(React)],
+
+  getInitialState() {
+    return {
+      loading: false
+    }
+  },
 
   onClick() {
     this.getFlux().actions.catchPokemon(this.props.id);
@@ -16,7 +23,23 @@ let UncaughtPokemon = React.createClass({
   },
 
   render() {
-    return <li onClick={this.onClick} className="PokemonList__Item--uncaught">{this.props.id}</li>
+    let itemClasses = {
+      'PokemonList-Item': true,
+      'PokemonList-Item--uncaught': true,
+    }
+
+    let pokeballClasses = {
+      'PokeBall': true,
+      'PokeBall--spinning': this.state.loading
+    }
+    return (
+      <li onClick={this.onClick} className={classnames(itemClasses)}>
+        <div className={classnames(pokeballClasses)}>
+          <div className="PokeBall-Gap"></div>
+          <div className="PokeBall-Button">{this.props.id}</div>
+        </div>
+      </li>
+    );
   }
 });
 
@@ -25,11 +48,11 @@ let CaughtPokemon = React.createClass({
 
   render() {
     let classes = {
-      "PokemonList__Item": true,
-      "PokemonList__Item--caught": true,
+      "PokemonList-Item": true,
+      "PokemonList-Item--caught": true,
     }
     this.props.pokemon.types.forEach(
-      type => classes["PokemonList__Item--" + type.name] = true
+      type => classes["PokemonList-Item--" + type.name] = true
     );
     
     return <li className={classnames(classes)}>{this.props.pokemon.name}</li>

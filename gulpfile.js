@@ -65,7 +65,7 @@ gulp.task('watch-css', function() {
   gulp.src('./src/css/**/*.css')
     .pipe(watch('./src/css/**/*.css', {verbose: true}, function() {
       gulp.src('./src/css/**/*.css')
-        .pipe(postcss([postcssBem({style: 'bem'})]))
+        .pipe(postcss([postcssBem()]))
         .pipe(gulp.dest('./build'));
     }))
 });

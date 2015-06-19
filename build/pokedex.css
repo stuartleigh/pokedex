@@ -1,3 +1,65 @@
-body {
-	background: #f5f5f5;
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.PokemonList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.PokemonList-Item {
+  display: flex;
+  width: 120px;
+  height: 120px;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.PokeBall {
+  height: 90px;
+  width: 90px;
+  border-radius: 90px;
+  background: #ccc;
+  position: relative;
+  background-image: linear-gradient(#aaa 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .2));
+}
+
+.PokeBall--spinning {
+  animation: spin 1.612s linear infinite;
+}
+
+.PokeBall-Gap {
+  height: 6px;
+  width: 100%;
+  top: 50%;
+  margin-top: -3px;
+  position: absolute;
+  background: #fff;
+}
+
+.PokeBall-Button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  border-radius: 36px;
+  border: 6px solid #fff;
+  background: #aaa;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.7rem;
+  font-size: 0.9rem;
 }
