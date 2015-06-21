@@ -18,7 +18,7 @@ let UncaughtPokemon = React.createClass({
   },
 
   onClick() {
-    this.getFlux().actions.catchPokemon(this.props.id);
+    this.getFlux().actions.loadPokemon(this.props.id);
     this.setState({loading: true});
   },
 

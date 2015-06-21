@@ -1,3 +1,5 @@
+import {idFromResourceURI} from './utils';
+
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {  
     return Promise.resolve(response)  
@@ -11,7 +13,7 @@ function parseJSON(response) {
 }
 
 class PokeAPI {
-  constructor() {
+  constructor(options) {
     this.baseURL = "http://pokeapi.co";
   }
 
@@ -29,6 +31,21 @@ class PokeAPI {
 export class PokedexAPI extends PokeAPI {
   url() {
     return this.baseURL + '/api/v1/pokedex/1/'
+  }
+
+  get(params) {
+    return super.get(params).then(this.sortPokedex.bind(this));
+  }
+
+  sortPokedex(pokedexData) {
+    /* the pokeAPI doesn't send them back ordered, so we'll do it ourselves, also we'll filter out the variants */
+    var pokedex = pokedexData.pokemon;
+    pokedex = pokedex.filter(
+      pokemon => idFromResourceURI(pokemon.resource_uri) < 10000
+    ).sort(
+      (a, b) => idFromResourceURI(a.resource_uri) - idFromResourceURI(b.resource_uri)
+    );
+    return pokedex;
   }
 }
 

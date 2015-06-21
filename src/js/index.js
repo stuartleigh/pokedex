@@ -12,10 +12,11 @@ import LocalStorage from './storage';
 
 
 var stores = {
-	PokedexStore: new PokedexStore({storage: new LocalStorage()}),
+	PokedexStore: new PokedexStore(),
 }
 
 var flux = new Flux(stores, actions);
+flux.storage = new LocalStorage()
 
 React.render(
 	<App flux={flux} />,

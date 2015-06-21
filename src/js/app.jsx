@@ -16,6 +16,7 @@ export default React.createClass({
 
   componentDidMount() {
     this.getFlux().actions.loadPokedex();
+    this.getFlux().actions.loadCaughtPokemon();
   },
 
   render() {
